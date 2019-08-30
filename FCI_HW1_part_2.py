@@ -1,7 +1,7 @@
 
 # File: FCI_HW1_part_2.py
-# Authors (use Andrew IDs):
-# Date:
+# Authors (use Andrew IDs): xingqil
+# Date: Aug 30, 2019
 
 from Employee3 import Employee
 from Manager import Manager
@@ -27,18 +27,17 @@ def print_emps(corp):
 
 print_emps(global_corp)
 
-'''
-
 # 2.b
 
 for e in global_corp:
-    # if e is a Manager
-        # give a 10% raise
-    # else
-        # give a 2% raise
+    if isinstance(e, Manager):
+        percent = 10
+    else:
+        percent = 3
+
+    e.give_raise(percent)
 
 print_emps(global_corp)
-
 
 # 2.c
 
@@ -92,4 +91,3 @@ print('... temp job has completed.')
 print('After temp_job() has been completed,', Employee.get_num_existing(),
            'Employees currently exist.')
 
-'''

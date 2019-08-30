@@ -10,6 +10,9 @@ class Manager(emp.Employee):
         super().__init__(name, id, rate)
         self._budget = budget
 
+    def __del__(self):
+        super().__del__()
+
     def __str__(self):
         return (super().__str__() + ", budget:"
                 + str(self._budget))
