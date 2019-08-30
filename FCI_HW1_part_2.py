@@ -19,9 +19,11 @@ print('dora:', dora)
 
 global_corp = [al, bob, cy, dora]   # a company with four employees
 
+
 def print_emps(corp):
     for e in corp:
         print(e)
+
 
 print_emps(global_corp)
 
